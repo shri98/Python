@@ -13,4 +13,5 @@ def print_stack(stack):
 push(1)
 push(45)
 push(5)
+push(52)
 print_stack(stack)
