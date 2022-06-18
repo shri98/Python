@@ -5,7 +5,7 @@ def push(i):
     stack.append(i)
 
 def pop():
-    return stack.pop(0)
+    return stack.pop(-1)
 
 def print_stack(stack):
     while (len(stack) != 0):
