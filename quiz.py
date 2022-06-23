@@ -9,14 +9,28 @@
 # print(is_lucky(n))
 
 
-def chocolates (arr, n) :
-    #Complete the function
-    while len(arr) > 1:
-        del arr[arr.index(max(arr))]
+# def chocolates (arr, n) :
+#     #Complete the function
+#     while len(arr) > 1:
+#         del arr[arr.index(max(arr))]
+#
+#     return arr[0]
+#
+# n = 5
+# arr = [5, 3, 1, 6, 9]
+#
+# print(chocolates(arr, n))
 
-    return arr[0]
+## Rotate array twice
 
-n = 5
-arr = [5, 3, 1, 6, 9]
+arr = [1, 2, 3, 4, 5]
+q = []
+n = input("Number of times to rotate array: -\n")
+for i in range(int(n) % len(arr)):
+    q.append(arr.pop(-1))
+while arr:
+    q.append(arr.pop(0))
 
-print(chocolates(arr, n))
+    # print(arr)
+
+print(q)
