@@ -21,16 +21,17 @@
 #
 # print(chocolates(arr, n))
 
-## Rotate array twice
-
+## Rotate array n times
+#      0  1  2  3  4
 arr = [1, 2, 3, 4, 5]
-q = []
-n = input("Number of times to rotate array: -\n")
-for i in range(int(n) % len(arr)):
-    q.append(arr.pop(-1))
-while arr:
-    q.append(arr.pop(0))
+n = int(input("Number of times to rotate array: -\n")) % len(arr)
 
-    # print(arr)
+for i in range(len(arr)):
+    arr[i] = arr[i] + (10*(arr[(i+n+1) % len(arr)] % 10))
 
-print(q)
+# print(arr)
+
+for i in range(len(arr)):
+    arr[i] = (arr[i] // 10)
+
+print(arr)
