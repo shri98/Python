@@ -23,15 +23,15 @@
 
 ## Rotate array n times
 #      0  1  2  3  4
-arr = [1, 2, 3, 4, 5]
-n = int(input("Number of times to rotate array: -\n")) % len(arr)
-
-for i in range(len(arr)):
-    arr[i] = arr[i] + (10*(arr[(i+n+1) % len(arr)] % 10))
-
+# arr = [1, 2, 3, 4, 5]
+# n = int(input("Number of times to rotate array: -\n")) % len(arr)
+#
+# for i in range(len(arr)):
+#     arr[i] = arr[i] + (10*(arr[(i+n+1) % len(arr)] % 10))
+#
+# # print(arr)
+#
+# for i in range(len(arr)):
+#     arr[i] = (arr[i] // 10)
+#
 # print(arr)
-
-for i in range(len(arr)):
-    arr[i] = (arr[i] // 10)
-
-print(arr)
